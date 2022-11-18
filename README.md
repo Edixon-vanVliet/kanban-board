@@ -1,46 +1,31 @@
-# Getting Started with Create React App and Redux
+# Kanban Board
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+## Requirements
 
-## Available Scripts
+- The latest version of React should be used.
+- Hooks only. This means, no classes are allowed.
+- `Emotion-js` for styling.
+- `Persistence`: cards should be stored in the `local_storage` and you should simulate `5 seconds` of delay while fetching the list of cards.
+- Please use Skeleton while fetching cards.
+- Unit Testing: At least two main components(i.e `Creation form` and `Filters`).
 
-In the project directory, you can run:
+## Exercise
 
-### `npm start`
+1.  Implement a Kanban Board with three columns, "To Do", "In Progress" and "Done" where users can `add`, `edit`, and `delete` issues (Cards). When a user adds a new card, this one should be placed at the bottom of the "To Do" column.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+    - The forms to `create` and `delete` cards should be placed in a `modal`.
+    - A `confirmation modal` should be displayed before deleting a card.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+    Every card should have the following fields:
 
-### `npm test`
+    - Title
+    - Description
+    - Tag (SEO, Long Form, Blog Post)
+    - Assignee
+    - Due Date
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+2.  Implement the `drag and drop` functionality where users should be able to select `one or multiple` cards and move them from one column to another. When dropping one or more cards into a column containing other cards, the new cards should be added at the bottom, keeping the same order they had before. (You can use a lib)
+3.  Implement a `search` to filter cards based on the following fields:
+    - Title
+    - Assignee
+    - Tags
