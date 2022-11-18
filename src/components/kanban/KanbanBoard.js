@@ -86,7 +86,7 @@ export const KanbanBoard = () => {
             }
           `}
         >
-          <FontAwesomeIcon icon={faPlus} /> Add Card
+          <FontAwesomeIcon icon={faPlus} /> Add Task
         </button>
       </div>
       <div
