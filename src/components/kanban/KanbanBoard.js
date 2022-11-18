@@ -91,7 +91,7 @@ export const KanbanBoard = () => {
       </div>
       <div
         className={css`
-          height: 100%;
+          height: fit-content;
           display: grid;
           grid-template-columns: 400px 400px 400px;
         `}
