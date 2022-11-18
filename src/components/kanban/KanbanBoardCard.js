@@ -1,5 +1,4 @@
-/** @jsxImportSource @emotion/react */
-import { css } from "@emotion/react";
+import { css } from "@emotion/css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEllipsisVertical, faTrash, faEdit } from "@fortawesome/free-solid-svg-icons";
 import { useDrag } from "react-dnd";
@@ -66,7 +65,7 @@ export const KanbanBoardCard = memo(({ id, title, description, assignee, due, st
   return (
     <div
       ref={drag}
-      css={css`
+      className={css`
         border: 1px solid #999;
         border-radius: 5px;
         width: 300px;
@@ -77,7 +76,7 @@ export const KanbanBoardCard = memo(({ id, title, description, assignee, due, st
       `}
     >
       <div
-        css={css`
+        className={css`
           position: absolute;
           width: calc(100% - 16px - 10px);
           top: 5px;
@@ -87,7 +86,7 @@ export const KanbanBoardCard = memo(({ id, title, description, assignee, due, st
         `}
       >
         <div
-          css={css`
+          className={css`
             display: flex;
             align-items: center;
             gap: 5px;
@@ -97,7 +96,7 @@ export const KanbanBoardCard = memo(({ id, title, description, assignee, due, st
         </div>
         <button
           onClick={() => setShowMenu(!showMenu)}
-          css={css`
+          className={css`
             font-size: 16px;
             background-color: transparent;
             outline: none;
@@ -111,7 +110,7 @@ export const KanbanBoardCard = memo(({ id, title, description, assignee, due, st
           <FontAwesomeIcon icon={faEllipsisVertical} />
           <div
             ref={menuRef}
-            css={css`
+            className={css`
               display: ${showMenu ? "block" : "none"};
               z-index: 1;
               position: absolute;
@@ -122,7 +121,7 @@ export const KanbanBoardCard = memo(({ id, title, description, assignee, due, st
             `}
           >
             <ul
-              css={css`
+              className={css`
                 list-style: none;
                 text-align: left;
                 padding: 0px;
@@ -145,7 +144,7 @@ export const KanbanBoardCard = memo(({ id, title, description, assignee, due, st
         </button>
       </div>
       <h4
-        css={css`
+        className={css`
           text-align: center;
           margin-top: 25px;
         `}
@@ -154,7 +153,7 @@ export const KanbanBoardCard = memo(({ id, title, description, assignee, due, st
       </h4>
       <p>{description}</p>
       <div
-        css={css`
+        className={css`
           display: flex;
           justify-content: space-between;
           font-size: 0.7em;

@@ -1,5 +1,4 @@
-/** @jsxImportSource @emotion/react */
-import { css } from "@emotion/react";
+import { css } from "@emotion/css";
 import styled from "@emotion/styled";
 import PropTypes from "prop-types";
 import { shallowEqual, useDispatch, useSelector } from "react-redux";
@@ -69,7 +68,7 @@ export const Modal = ({ title, show, onClose }) => {
     show && (
       <div
         onClick={() => onClose()}
-        css={css`
+        className={css`
           position: fixed;
           left: 0;
           top: 0;
@@ -83,18 +82,18 @@ export const Modal = ({ title, show, onClose }) => {
       >
         <div
           onClick={(event) => event.stopPropagation()}
-          css={css`
+          className={css`
             width: 500px;
             background-color: white;
           `}
         >
           <div
-            css={css`
+            className={css`
               padding: 10px;
             `}
           >
             <h4
-              css={css`
+              className={css`
                 margin: 0;
               `}
             >
@@ -102,14 +101,14 @@ export const Modal = ({ title, show, onClose }) => {
             </h4>
           </div>
           <div
-            css={css`
+            className={css`
               padding: 10px;
               border-top: 1px solid #eee;
               border-bottom: 1px solid #eee;
             `}
           >
             <form
-              css={css`
+              className={css`
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -120,7 +119,7 @@ export const Modal = ({ title, show, onClose }) => {
                 <label htmlFor="title">
                   Title
                   <span
-                    css={css`
+                    className={css`
                       color: red;
                     `}
                   >
@@ -129,7 +128,7 @@ export const Modal = ({ title, show, onClose }) => {
                 </label>
                 <div>
                   <input
-                    css={css`
+                    className={css`
                       width: 100%;
                     `}
                     type="text"
@@ -145,7 +144,7 @@ export const Modal = ({ title, show, onClose }) => {
                 <label htmlFor="description">
                   Description
                   <span
-                    css={css`
+                    className={css`
                       color: red;
                     `}
                   >
@@ -154,7 +153,7 @@ export const Modal = ({ title, show, onClose }) => {
                 </label>
                 <div>
                   <textarea
-                    css={css`
+                    className={css`
                       width: 100%;
                     `}
                     name="description"
@@ -169,7 +168,7 @@ export const Modal = ({ title, show, onClose }) => {
                 <label htmlFor="tags">
                   Tags
                   <span
-                    css={css`
+                    className={css`
                       color: red;
                     `}
                   >
@@ -178,7 +177,7 @@ export const Modal = ({ title, show, onClose }) => {
                 </label>
                 <div>
                   <select
-                    css={css`
+                    className={css`
                       width: 100%;
                     `}
                     multiple
@@ -198,7 +197,7 @@ export const Modal = ({ title, show, onClose }) => {
                 <label htmlFor="assignee">
                   Assignee
                   <span
-                    css={css`
+                    className={css`
                       color: red;
                     `}
                   >
@@ -207,7 +206,7 @@ export const Modal = ({ title, show, onClose }) => {
                 </label>
                 <div>
                   <input
-                    css={css`
+                    className={css`
                       width: 100%;
                     `}
                     type="text"
@@ -223,7 +222,7 @@ export const Modal = ({ title, show, onClose }) => {
                 <label htmlFor="due">
                   Due date
                   <span
-                    css={css`
+                    className={css`
                       color: red;
                     `}
                   >
@@ -232,7 +231,7 @@ export const Modal = ({ title, show, onClose }) => {
                 </label>
                 <div>
                   <input
-                    css={css`
+                    className={css`
                       width: 100%;
                     `}
                     type="date"
@@ -246,7 +245,7 @@ export const Modal = ({ title, show, onClose }) => {
             </form>
           </div>
           <div
-            css={css`
+            className={css`
               padding: 10px;
               display: flex;
               justify-content: end;
@@ -254,7 +253,7 @@ export const Modal = ({ title, show, onClose }) => {
             `}
           >
             <button
-              css={css`
+              className={css`
                 background-color: rgb(48, 133, 214);
                 color: white;
                 padding: 10px 15px;
@@ -275,7 +274,7 @@ export const Modal = ({ title, show, onClose }) => {
               Save
             </button>
             <button
-              css={css`
+              className={css`
                 background-color: rgb(221, 51, 51);
                 color: white;
                 padding: 10px 15px;

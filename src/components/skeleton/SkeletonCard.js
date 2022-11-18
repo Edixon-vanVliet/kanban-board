@@ -1,5 +1,4 @@
-/** @jsxImportSource @emotion/react */
-import { css } from "@emotion/react";
+import { css } from "@emotion/css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEllipsisVertical } from "@fortawesome/free-solid-svg-icons";
 
@@ -8,7 +7,7 @@ import styles from "./SkeletonCardStyles";
 export const SkeletonCard = () => {
   return (
     <div
-      css={css`
+      className={css`
         border: 1px solid #999;
         border-radius: 5px;
         width: 300px;
@@ -18,7 +17,7 @@ export const SkeletonCard = () => {
       `}
     >
       <div
-        css={css`
+        className={css`
           position: absolute;
           width: calc(100% - 16px - 10px);
           top: 5px;
@@ -28,7 +27,7 @@ export const SkeletonCard = () => {
         `}
       >
         <div
-          css={css`
+          className={css`
             display: flex;
             align-items: center;
             gap: 5px;
@@ -39,7 +38,7 @@ export const SkeletonCard = () => {
           <styles.Tag />
         </div>
         <button
-          css={css`
+          className={css`
             font-size: 16px;
             background-color: transparent;
             outline: none;
@@ -62,7 +61,7 @@ export const SkeletonCard = () => {
         <styles.DescriptionText />
       </styles.Description>
       <div
-        css={css`
+        className={css`
           display: flex;
           justify-content: space-between;
           font-size: 0.7em;

@@ -1,5 +1,4 @@
-/** @jsxImportSource @emotion/react */
-import { css } from "@emotion/react";
+import { css } from "@emotion/css";
 import PropTypes from "prop-types";
 import { useDrop } from "react-dnd";
 import { SkeletonCard } from "../skeleton/SkeletonCard";
@@ -20,12 +19,12 @@ export const KanbanBoardColumn = ({ title, onDrop, showModal, isLoading = false,
   return (
     <div
       ref={drop}
-      css={css`
+      className={css`
         border: 1px solid black;
       `}
     >
       <h2
-        css={css`
+        className={css`
           text-align: center;
         `}
       >
@@ -33,7 +32,7 @@ export const KanbanBoardColumn = ({ title, onDrop, showModal, isLoading = false,
       </h2>
       <hr />
       <div
-        css={css`
+        className={css`
           display: flex;
           flex-direction: column;
           align-items: center;

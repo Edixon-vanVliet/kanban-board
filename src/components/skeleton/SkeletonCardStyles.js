@@ -1,5 +1,4 @@
-/** @jsxImportSource @emotion/react */
-import { keyframes } from "@emotion/react";
+import { keyframes } from "@emotion/css";
 import styled from "@emotion/styled";
 
 const color = "#ddd";

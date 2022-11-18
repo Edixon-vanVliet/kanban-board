@@ -1,5 +1,4 @@
-/** @jsxImportSource @emotion/react */
-import { css } from "@emotion/react";
+import { css } from "@emotion/css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import { KanbanBoardColumn } from "./KanbanBoardColumn";
@@ -46,7 +45,7 @@ export const KanbanBoard = () => {
 
   return (
     <div
-      css={css`
+      className={css`
         height: 100%;
         display: flex;
         flex-direction: column;
@@ -54,7 +53,7 @@ export const KanbanBoard = () => {
       `}
     >
       <div
-        css={css`
+        className={css`
           display: flex;
           justify-content: space-between;
         `}
@@ -64,14 +63,14 @@ export const KanbanBoard = () => {
           value={search}
           onChange={({ target }) => setSearch(target.value.toLocaleLowerCase())}
           placeholder="Search..."
-          css={css`
+          className={css`
             width: 200px;
           `}
         />
         <button
           disabled={isLoading}
           onClick={showModal}
-          css={css`
+          className={css`
             background-color: #16b530;
             color: white;
             outline: none;
@@ -91,7 +90,7 @@ export const KanbanBoard = () => {
         </button>
       </div>
       <div
-        css={css`
+        className={css`
           height: 100%;
           display: grid;
           grid-template-columns: 400px 400px 400px;

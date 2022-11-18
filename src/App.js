@@ -1,22 +1,21 @@
-/** @jsxImportSource @emotion/react */
-import { css } from "@emotion/react";
+import { css } from "@emotion/css";
 import { KanbanBoard } from "./components/kanban/KanbanBoard";
 
 function App() {
   return (
     <div
-      css={css`
+      className={css`
         height: 100vh;
       `}
     >
       <header
-        css={css`
+        className={css`
           background-color: #1e65ff;
           padding: 10px;
         `}
       >
         <h1
-          css={css`
+          className={css`
             color: white;
             max-width: 1200px;
             margin: 0 auto;
@@ -26,7 +25,7 @@ function App() {
         </h1>
       </header>
       <div
-        css={css`
+        className={css`
           height: calc(100vh - 130px);
           width: 100%;
           max-width: 1200px;
